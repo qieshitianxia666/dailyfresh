@@ -1,0 +1,76 @@
+ .banner{
+     width: 760px;
+    height: 270px;
+
+    border-radius: 5px;
+
+    position: relative;
+    z-index: 1;
+     float: left;
+    margin-bottom: 4px;
+    overflow: hidden;
+
+}
+ .banner:hover .prev {
+    display: block;
+}
+ .banner:hover .next{
+    display: block;
+}
+.prev:link{
+    color:#de5858;
+}
+.next:link{
+    color:#de5858;
+}
+.prev, .next {
+    display: block;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 28px;
+    margin-top: -26px;
+    font-size: 25px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 52%;
+    border-radius: 5px;
+    display: none;
+}
+.prev, .next:hover{
+    opacity: 0.9;
+}
+.next {
+    right: 0;
+}
+ .banner li.b1{
+    width: 152px;
+    height: 100%;
+    position: absolute;
+    top:0;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+ .banner li.b1 div{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+ .banner li.b1 div:nth-child(1){
+    background: url(../images/slide.jpg) no-repeat;
+    transform:rotateX(0deg) translateZ(60px);
+}
+ .banner li.b1 div:nth-child(2){
+    background: url(../images/slide04.jpg) no-repeat;
+    transform:rotateX(-90deg) translateZ(60px);
+}
+ .banner li.b1 div:nth-child(3){
+    background: url(../images/slide02.jpg) no-repeat;
+    transform:rotateX(-180deg) translateZ(60px);
+}
+ .banner li.b1 div:nth-child(4){
+    background: url(../images/slide03.jpg) no-repeat;
+    transform:rotateX(-270deg) translateZ(60px);
+}

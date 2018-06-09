@@ -1,0 +1,256 @@
+
+{%extends 'base.html'%}
+{% block head %}
+<script type="text/javascript" src="/static/js/jquery-ui.min.js"></script>
+{% endblock head %}
+{%block body%}
+	<div class="navbar_con">
+		<div class="navbar">
+			<h1 class="fl">全部商品分类</h1>
+		</div>
+	</div>
+
+	<div class="center_con clearfix">
+		<ul class="subnav fl">
+            <li><a href="#model05" class="vegetables">新鲜蔬菜</a></li>
+            <li><a href="#model04" class="egg">禽类蛋品</a></li>
+            <li><a href="#model02" class="seafood">海鲜水产</a></li>
+			<li><a href="#model01" class="fruit">新鲜水果</a></li>
+			<li><a href="#model06" class="ice">速冻食品</a></li>
+			<li><a href="#model03" class="meet">猪牛羊肉</a></li>
+		</ul>
+        <div class="banner">
+                <ul>
+                    <li class="b1">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+
+                    </li>
+                    <li class="b1">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+
+                    </li>
+                    <li class="b1">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+
+                    </li>
+                    <li class="b1">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+
+                    </li>
+                    <li class="b1">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </li>
+                </ul>
+                <a href="javascript:;" class="prev">&lt;</a>
+                <a href="javascript:;" class="next">&gt;</a>
+                <ul class="points"></ul>
+            </div>
+		<div class="adv fl">
+			<a href="#"><img src="/static/images/adv01.jpg"></a>
+			<a href="#"><img src="/static/images/adv02.jpg"></a>
+		</div>
+	</div>
+    <div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model05">新鲜蔬菜</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+				{%for g in vegetables%}
+				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a>
+				{%endfor%}
+			</div>
+			<a href="/list5_1_1" class="goods_more fr">查看更多 ></a>
+		</div>
+
+		<div class="goods_con clearfix">
+			<div class="goods_banner fl"><img src="/static/images/banner05.jpg"></div>
+			<ul class="goods_list fl">
+				{%for g in vegetables2%}
+				<li>
+					<h4><a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a></h4>
+					<a href="/{{g.id}}"><img src="/static/{{g.gpic}}"></a>
+					<div class="prize">¥{{g.gprice}}<b style="color: #4e4e4e;font-size: 12px">/500g</b></div>
+				</li>
+				{%endfor%}
+			</ul>
+		</div>
+	</div>
+    <div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model04">禽类蛋品</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+				{%for g in egg%}
+				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a>
+				{%endfor%}
+			</div>
+			<a href="/list4_1_1" class="goods_more fr">查看更多 ></a>
+		</div>
+
+		<div class="goods_con clearfix">
+			<div class="goods_banner fl"><img src="/static/images/banner04.jpg"></div>
+			<ul class="goods_list fl">
+				{%for g in egg2%}
+				<li>
+					<h4><a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a></h4>
+					<a href="/{{g.id}}"><img src="/static/{{g.gpic}}"></a>
+					<div class="prize">¥{{g.gprice}}<b style="color: #4e4e4e;font-size: 12px">/500g</b></div>
+				</li>
+				{%endfor%}
+			</ul>
+		</div>
+	</div>
+    <div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model02">海鲜水产</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+				{%for g in fish%}
+				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a>
+				{%endfor%}
+			</div>
+			<a href="/list7_1_1" class="goods_more fr">查看更多 ></a>
+		</div>
+
+		<div class="goods_con clearfix">
+			<div class="goods_banner fl"><img src="/static/images/banner02.jpg"></div>
+			<ul class="goods_list fl">
+				{%for g in fish2%}
+				<li>
+					<h4><a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a></h4>
+					<a href="/{{g.id}}"><img src="/static/{{g.gpic}}"></a>
+					<div class="prize">¥{{g.gprice}}<b style="color: #4e4e4e;font-size: 12px">/500g</b></div>
+				</li>
+				{%endfor%}
+			</ul>
+		</div>
+	</div>
+	<div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model01">新鲜水果</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+				{%for g in fruit%}
+				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a>
+				{%endfor%}
+			</div>
+			<a href="/list1_1_1" class="goods_more fr" id="fruit_more">查看更多 ></a>
+		</div>
+
+		<div class="goods_con clearfix">
+			<div class="goods_banner fl"><img src="/static/images/banner01.jpg"></div>
+			<ul class="goods_list fl">
+				{%for g in fruit2%}
+				<li>
+					<!--images/goods/goods003.jpg-->
+					<h4><a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a></h4>
+					<a href="/{{g.id}}"><img src="/static/{{g.gpic}}"></a>
+                    <div class="prize">¥{{g.gprice}}<b style="color: #4e4e4e;font-size: 12px">/500g</b></div>
+				</li>
+				{%endfor%}
+			</ul>
+		</div>
+	</div>
+    <div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model06">速冻食品</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+				{%for g in frozen%}
+				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a>
+				{%endfor%}
+			</div>
+			<a href="/list6_1_1" class="goods_more fr">查看更多 ></a>
+		</div>
+
+		<div class="goods_con clearfix">
+			<div class="goods_banner fl"><img src="/static/images/banner06.jpg"></div>
+			<ul class="goods_list fl">
+				{%for g in frozen2%}
+				<li>
+					<h4><a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a></h4>
+					<a href="/{{g.id}}"><img src="/static/{{g.gpic}}"></a>
+					<div class="prize">¥{{g.gprice}}<b style="color: #4e4e4e;font-size: 12px">/500g</b></div>
+				</li>
+				{%endfor%}
+			</ul>
+		</div>
+	</div>
+	<div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model03">猪牛羊肉</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+				{%for g in meat%}
+				<a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a>
+				{%endfor%}
+			</div>
+			<a href="/list3_1_1" class="goods_more fr">查看更多 ></a>
+		</div>
+
+		<div class="goods_con clearfix">
+			<div class="goods_banner fl"><img src="/static/images/banner03.jpg"></div>
+			<ul class="goods_list fl">
+				{%for g in meat2%}
+				<li>
+					<h4><a href="/{{g.id}}">{{g.gtitle|slice:'10'}}</a></h4>
+					<a href="/{{g.id}}"><img src="/static/{{g.gpic}}"></a>
+					<div class="prize">¥{{g.gprice}}<b style="color: #4e4e4e;font-size: 12px">/500g</b></div>
+				</li>
+				{%endfor%}
+			</ul>
+		</div>
+	</div>
+
+    <script>
+        $(function(){
+            $(".b1").each(function(index,ele){
+                $(this).css({"left":152*index,"transition-delay":index*0.15+"s"});
+                $(this).children("div").css("backgroundPosition",-152*index+"px");
+            })
+            var num = 0;
+
+            var timer = setInterval(autoplay,3000)
+
+            $(".banner").mouseenter(function () {
+                clearInterval(timer)
+            })
+            $(".banner").mouseleave(function () {
+                timer = setInterval(autoplay,3000)
+            })
+            function autoplay () {
+                num++;
+                $(".b1").css("transform","rotateX("+num*90+"deg)");
+            }
+            $(".next").on("click",function(){
+                num++;
+                $(".b1").css("transform","rotateX("+num*90+"deg)");
+            })
+            $(".prev").on("click",function(){
+                num--;
+                $(".b1").css("transform","rotateX("+num*90+"deg)");
+            })
+
+        })
+
+    </script>
+
+
+
+{%endblock body%}
